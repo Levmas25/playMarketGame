@@ -8,12 +8,11 @@ public class TreeSpawn : MonoBehaviour
     public GameObject tree_perfab;
     void Start()
     {
-        InvokeRepeating("Spawn", 1, seconds);
+        InvokeRepeating("Spawn", 1, 7);
     }
     private void Update()
     {
         pos = Random.Range(0, 10000);
-        seconds = Random.Range(5, 10);
     }
 
     void Spawn()
@@ -25,7 +24,7 @@ public class TreeSpawn : MonoBehaviour
         {
             tree.transform.position = new Vector3(start, pos_y, pos_z);
             GameObject tree2 = Instantiate(tree_perfab);
-            tree.transform.position = new Vector3(end, pos_y, pos_z);
+            tree2.transform.position = new Vector3(end, pos_y, pos_z);
         }
 
         else
