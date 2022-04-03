@@ -7,10 +7,12 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public GameObject heart1, heart2, heart3;
     public GameObject apple_perfab, fence_perfab;
+    private AudioSource sound;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        sound = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -41,18 +43,21 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             life += 1;
             Destroy(heart1);
+            sound.Play();
         }
         else if (collision.gameObject.tag == "Stena" && life == 1)
         {
             Destroy(collision.gameObject);
             life += 1;
             Destroy(heart2);
+            sound.Play();
         }
         else if (collision.gameObject.tag == "Stena" && life == 2)
         {
             Destroy(collision.gameObject);
             life += 1;
             Destroy(heart3);
+            sound.Play();
         }
     }
 

@@ -1,17 +1,15 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Buttons : MonoBehaviour
 {
-    public GameObject player;
-    public float speed;
-
-    public void Left()
+    public void MenuStart()
     {
-        player.transform.position -= new Vector3(speed, 0 ,0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-    public void Right()
+    public void MenuExit()
     {
-        player.transform.position += new Vector3(speed, 0, 0);
+        Debug.Log("Game close");
+        Application.Quit();
     }
 }
