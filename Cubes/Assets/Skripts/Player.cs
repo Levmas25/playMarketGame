@@ -3,7 +3,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int apple, life;
-    public float speed;
+    public float normal_speed, speed;
     public Rigidbody rb;
     public GameObject heart1, heart2, heart3;
     public GameObject apple_perfab, fence_perfab;
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, rb.velocity.y, rb.velocity.z);
+        rb.velocity = new Vector3(rb.velocity.x + speed, rb.velocity.y, rb.velocity.z);
         if (apple > 50)
         {
             apple_perfab.GetComponent<Move>().speed = 13f;
@@ -54,5 +54,20 @@ public class Player : MonoBehaviour
             life += 1;
             Destroy(heart3);
         }
+    }
+
+    public void OnRightButtonDown()
+    {
+        speed = normal_speed;
+    }
+
+    public void OnLeftButtonDown()
+    {
+        speed = -normal_speed;
+    }
+
+    public void ButtonUp()
+    {
+        speed = 0f;
     }
 }

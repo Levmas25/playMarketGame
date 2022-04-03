@@ -7,11 +7,11 @@ public class Buttons : MonoBehaviour
 
     public void Left()
     {
-        player.transform.position += Vector3.left * speed * Time.deltaTime;
+        player.transform.position -= new Vector3(speed, 0 ,0);
     }
 
     public void Right()
     {
-        player.transform.position += Vector3.right * speed * Time.deltaTime;
+        player.transform.position += new Vector3(speed, 0, 0);
     }
 }
