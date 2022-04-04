@@ -12,4 +12,17 @@ public class Buttons : MonoBehaviour
         Debug.Log("Game close");
         Application.Quit();
     }
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+    }
+    public void ExitMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+    }
 }
