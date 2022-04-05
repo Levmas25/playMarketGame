@@ -11,10 +11,4 @@ public class TubeMove : MonoBehaviour
         if (transform.position.z < 12)
             Destroy(gameObject);
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //if (collision.gameObject.tag == "Player")
-            //SceneManager.LoadScene("First");
-    }
 }

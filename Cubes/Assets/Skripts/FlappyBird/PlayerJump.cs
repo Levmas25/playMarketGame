@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerJump : MonoBehaviour
 {
     Rigidbody player;
     public float force;
+    public int points;
     void Start()
     {
         player = GetComponent<Rigidbody>();
@@ -13,6 +15,17 @@ public class PlayerJump : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            player.AddForce(Vector3.up * force, ForceMode.Impulse);
+            player.AddForce(new Vector3(0, force, 0));
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Coin")
+        {
+            Destroy(collision.gameObject);
+            points++;
+        }
+        //if (collision.gameObject.tag == "Tube")
+            //SceneManager.LoadScene("FlappyBird");
     }
 }
