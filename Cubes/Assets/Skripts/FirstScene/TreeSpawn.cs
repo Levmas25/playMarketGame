@@ -8,7 +8,7 @@ public class TreeSpawn : MonoBehaviour
     public GameObject tree_perfab;
     void Start()
     {
-        InvokeRepeating("Spawn", 1, 7);
+        InvokeRepeating("Spawn", 1, seconds);
     }
     private void Update()
     {

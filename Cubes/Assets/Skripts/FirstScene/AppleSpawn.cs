@@ -4,10 +4,11 @@ public class AppleSpawn : MonoBehaviour
 {
     public GameObject apple, ashik_apple;
     public float start, end, pos_y, pos_z;
+    public float seconds;
     public int random;
     void Start()
     {
-        InvokeRepeating("Spawn", 1, 5);
+        InvokeRepeating("Spawn", 1, seconds);
     }
 
     private void FixedUpdate()

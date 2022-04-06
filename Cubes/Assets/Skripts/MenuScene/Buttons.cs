@@ -25,4 +25,9 @@ public class Buttons : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
+
+    public void SecondLvl()
+    {
+        SceneManager.LoadScene(2);
+    }
 }

@@ -13,6 +13,6 @@ public class Points : MonoBehaviour
 
     void Update()
     {
-        text.text = (player.GetComponent<PlayerJump>().points / 2).ToString();
+        text.text = (player.GetComponent<PlayerJump>().points - 1).ToString();
     }
 }

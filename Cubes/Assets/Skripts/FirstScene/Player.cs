@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public int apple, life;
+    public int apple;
     public float normal_speed, speed;
     public Rigidbody rb;
     public GameObject heart1, heart2, heart3;
@@ -20,14 +21,17 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x + speed, rb.velocity.y, rb.velocity.z);
         if (apple > 50)
         {
-            apple_perfab.GetComponent<Move>().speed = 13f;
-            fence_perfab.GetComponent<Move>().speed = 11f;
+            apple_perfab.GetComponent<Move>().speed = 17f;
+            fence_perfab.GetComponent<Move>().speed = 15f;
         }
         else
         {
-            apple_perfab.GetComponent<Move>().speed = 9f;
-            fence_perfab.GetComponent<Move>().speed = 7f;
+            apple_perfab.GetComponent<Move>().speed = 15f;
+            fence_perfab.GetComponent<Move>().speed = 13f;
         }
+
+        if (apple == 100)
+            SceneManager.LoadScene(2);
 
     }
 
@@ -38,26 +42,23 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             apple += 1;
         }
-        if (collision.gameObject.tag == "Stena" && life == 0)
+        if (collision.gameObject.tag == "Stena" && heart1 != null)
         {
             Destroy(collision.gameObject);
-            life += 1;
             Destroy(heart1);
             sound.Play();
         }
-        else if (collision.gameObject.tag == "Stena" && life == 1)
+        else if (collision.gameObject.tag == "Stena" && heart1 == null && heart2 != null)
         {
             Destroy(collision.gameObject);
-            life += 1;
             Destroy(heart2);
             sound.Play();
         }
-        else if (collision.gameObject.tag == "Stena" && life == 2)
+        else if (collision.gameObject.tag == "Stena" && heart1 == null && heart2 == null)
         {
             Destroy(collision.gameObject);
-            life += 1;
-            Destroy(heart3);
             sound.Play();
+            SceneManager.LoadScene("First");
         }
     }
 
