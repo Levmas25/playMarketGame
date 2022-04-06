@@ -1301,6 +1301,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fish1Anim Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2451032083004696443, guid: 91d436c01d9bfd04995c1aaa41e4f6c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2974627678870896065, guid: 91d436c01d9bfd04995c1aaa41e4f6c4, type: 3}
       propertyPath: m_RootOrder
       value: 1
