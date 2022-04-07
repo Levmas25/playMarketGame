@@ -9,6 +9,7 @@ TagManager:
   - Stena
   - Apple
   - Ground
+  - Tube
   layers:
   - Default
   - TransparentFX

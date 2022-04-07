@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Points : MonoBehaviour
 {
@@ -14,5 +15,12 @@ public class Points : MonoBehaviour
     void Update()
     {
         text.text = (player.GetComponent<PlayerJump>().points - 1).ToString();
+    }
+    void FixedUpdate()
+    {
+        if (player.GetComponent<PlayerJump>().points == 100)
+        {
+            SceneManager.LoadScene("End");
+        }
     }
 }

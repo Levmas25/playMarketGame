@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LowerTube
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d8ac99a04057c7847b4922a6813b7ee2, type: 3}
+      propertyPath: m_TagString
+      value: Tube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8ac99a04057c7847b4922a6813b7ee2, type: 3}
 --- !u!1 &6455774251695757974 stripped
