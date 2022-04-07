@@ -2,43 +2,52 @@ using UnityEngine;
 
 public class TubeSpawn : MonoBehaviour
 {
-    public GameObject tube_perfab;
+    public GameObject lower_perfab;
+    public GameObject upper_perfab;
     public float spawnSpeed;
-    public float pos_x, pos_y, pos_z;
-    public int scale, start, end;
-    private BoxCollider collider;
-    private Transform trans;
+    public float pos_x, pos_z;
 
-    public GameObject money_perfab;
-    public int up;
-    public int money_start, money_end;
+    public float upper_y, upper_start, upper_end, upper_scale;
+    public float lower_y, lower_start, lower_end, lower_scale;
 
-    void Start()
+    private BoxCollider lower_collider;
+
+    public GameObject coin_perfab;
+    public float coin_up;
+    public float coin_start, coin_end;
+
+    private void Start()
     {
-        InvokeRepeating("TubesSpawn", 1, spawnSpeed);
-        if (money_perfab != null)
-            InvokeRepeating("MoneySpawn", 1, spawnSpeed);
+        InvokeRepeating("LowerSpawn", 1, spawnSpeed);
+        InvokeRepeating("UpperSpawn", 1, spawnSpeed);
+        InvokeRepeating("CoinSpawn", 1, spawnSpeed);
     }
 
-    void Update()
+    private void Update()
     {
-        scale = Random.Range(start, end);
-        up = Random.Range(money_start, money_end);
+        upper_scale = Random.Range(upper_start, upper_end);
+        lower_scale = Random.Range(lower_start, lower_end);
+        coin_up = Random.Range(coin_start, coin_end);
     }
 
-    void TubesSpawn()
+    void UpperSpawn()
     {
-        GameObject tube = Instantiate(tube_perfab);
-        Transform transform = tube.GetComponent<Transform>();
-        transform.localScale = new Vector3(transform.localScale.x, scale, transform.localScale.z);
-        tube.transform.position = new Vector3(pos_x, pos_y, pos_z);
-        collider = tube.GetComponent<BoxCollider>();
-        trans = tube.GetComponent<Transform>();
+        GameObject upper = Instantiate(upper_perfab);
+        upper.transform.localScale = new Vector3(upper.transform.localScale.x, upper_scale, upper.transform.localScale.z);
+        upper.transform.localPosition = new Vector3(pos_x, upper_y, pos_z);
     }
 
-    void MoneySpawn()
+    void LowerSpawn()
     {
-        GameObject money = Instantiate(money_perfab);
-        money.transform.position = new Vector3(pos_x,pos_y + collider.size.y + trans.localScale.y + scale + up, pos_z);
+        GameObject lower = Instantiate(lower_perfab);
+        lower.transform.localScale = new Vector3(lower.transform.localScale.x, lower_scale, lower.transform.localScale.z);
+        lower.transform.position = new Vector3(pos_x, lower_y, pos_z);
+        lower_collider = lower.GetComponent<BoxCollider>();
+    }
+
+    void CoinSpawn()
+    {
+        GameObject coin = Instantiate(coin_perfab);
+        coin.transform.position = new Vector3(pos_x, lower_y + lower_scale + coin_up + lower_collider.size.y, pos_z);
     }
 }

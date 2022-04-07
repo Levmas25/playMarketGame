@@ -7,21 +7,28 @@ public class PlayerJump : MonoBehaviour
     public float force;
     public int speed;
     public int points;
+    private Animation anim;
     void Start()
     {
         player = GetComponent<Rigidbody>();
+        anim = GetComponent<Animation>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             player.AddForce(new Vector3(0, force, 0));
+            anim.Play();
+        }
+
         foreach(var touch in Input.touches)
         {
             if(touch.phase == TouchPhase.Began)
             {
                 player.AddForce(new Vector3(0, force, 0));
+                anim.Play();
             }
         }
     }
@@ -33,7 +40,7 @@ public class PlayerJump : MonoBehaviour
             Destroy(collision.gameObject);
             points++;
         }
-        //if (collision.gameObject.tag == "Tube")
-        //SceneManager.LoadScene("FlappyBird");
+        if (collision.gameObject.tag == "Tube")
+            SceneManager.LoadScene("FlappyBird");
     }
 }
