@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public Rigidbody rb;
     public GameObject heart1, heart2, heart3;
     public GameObject apple_perfab, fence_perfab;
-    private AudioSource sound;
+    public AudioSource sound;
     public AudioSource delFence;
     public AudioSource delHeart;
     public AudioSource delApple;
@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        sound = GetComponent<AudioSource>();
         start_trans = transform;
     }
 
@@ -26,8 +25,8 @@ public class Player : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x + speed, rb.velocity.y, rb.velocity.z);
         if (apple > 50)
         {
-            apple_perfab.GetComponent<Move>().speed = 17f;
-            fence_perfab.GetComponent<Move>().speed = 15f;
+            apple_perfab.GetComponent<Move>().speed = 25f;
+            fence_perfab.GetComponent<Move>().speed = 20f;
         }
         else
         {

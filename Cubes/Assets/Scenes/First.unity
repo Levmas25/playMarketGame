@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4377377, g: 0.55802685, b: 0.7839383, a: 1}
+  m_IndirectSpecularColor: {r: 0.43781775, g: 0.5580552, b: 0.7839481, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -826,7 +826,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 100
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -944,6 +944,7 @@ MonoBehaviour:
   heart3: {fileID: 867105098}
   apple_perfab: {fileID: 3001317398745560948, guid: fea1d51f3555c58469b4d6feb8872091, type: 3}
   fence_perfab: {fileID: 1119974997354536400, guid: 737fa474d61aad240b3ea23f0e866155, type: 3}
+  sound: {fileID: 844257053}
   delFence: {fileID: 844257047}
   delHeart: {fileID: 844257056}
   delApple: {fileID: 844257057}
@@ -1014,7 +1015,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1206,7 +1207,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 135
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1302,7 +1303,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 130
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

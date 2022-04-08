@@ -47,5 +47,7 @@ public class PlayerJump : MonoBehaviour
         }
         if (collision.gameObject.tag == "Tube")
             SceneManager.LoadScene("FlappyBird");
+        if (collision.gameObject.tag == "Ground")
+            SceneManager.LoadScene("FlappyBird");
     }
 }
