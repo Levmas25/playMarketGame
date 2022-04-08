@@ -6,6 +6,7 @@ public class AppleCount : MonoBehaviour
     public GameObject player;
     public Text text;
 
+
     private void Start()
     {
         text = GetComponent<Text>();

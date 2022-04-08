@@ -8,6 +8,8 @@ public class PlayerJump : MonoBehaviour
     public int speed;
     public int points;
     private Animation anim;
+    public AudioSource fly;
+    public AudioSource money;
     void Start()
     {
         player = GetComponent<Rigidbody>();
@@ -21,6 +23,7 @@ public class PlayerJump : MonoBehaviour
         {
             player.AddForce(new Vector3(0, force, 0));
             anim.Play();
+            fly.Play();
         }
 
         foreach(var touch in Input.touches)
@@ -29,6 +32,7 @@ public class PlayerJump : MonoBehaviour
             {
                 player.AddForce(new Vector3(0, force, 0));
                 anim.Play();
+                fly.Play();
             }
         }
     }
@@ -38,6 +42,7 @@ public class PlayerJump : MonoBehaviour
         if (collision.gameObject.tag == "Coin")
         {
             Destroy(collision.gameObject);
+            money.Play();
             points++;
         }
         if (collision.gameObject.tag == "Tube")

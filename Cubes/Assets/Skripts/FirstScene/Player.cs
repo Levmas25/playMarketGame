@@ -9,7 +9,10 @@ public class Player : MonoBehaviour
     public GameObject heart1, heart2, heart3;
     public GameObject apple_perfab, fence_perfab;
     private AudioSource sound;
-
+    public AudioSource delFence;
+    public AudioSource delHeart;
+    public AudioSource delApple;
+    public AudioSource touch;
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -39,6 +42,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Apple")
         {
+            delApple.Play();
             Destroy(collision.gameObject);
             apple += 1;
         }
@@ -47,33 +51,42 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(heart1);
             sound.Play();
+            delFence.Play();
+            delHeart.Play();
         }
         else if (collision.gameObject.tag == "Stena" && heart1 == null && heart2 != null)
         {
             Destroy(collision.gameObject);
             Destroy(heart2);
             sound.Play();
+            delFence.Play();
+            delHeart.Play();
         }
         else if (collision.gameObject.tag == "Stena" && heart1 == null && heart2 == null)
         {
             Destroy(collision.gameObject);
             sound.Play();
+            delFence.Play();
+            delHeart.Play();
             SceneManager.LoadScene("First");
         }
     }
 
     public void OnRightButtonDown()
     {
+        touch.Play();
         speed = normal_speed;
     }
 
     public void OnLeftButtonDown()
     {
+        touch.Play();
         speed = -normal_speed;
     }
 
     public void ButtonUp()
     {
+        touch.Play();
         speed = 0f;
     }
 }
