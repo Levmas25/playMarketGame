@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    private Transform start_trans;
     public int apple;
     public float normal_speed, speed;
     public Rigidbody rb;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         sound = GetComponent<AudioSource>();
+        start_trans = transform;
     }
 
     void FixedUpdate()
