@@ -31,6 +31,10 @@ public class Buttons : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
+    public void OpenURL()
+    {
+        Application.OpenURL("https://docs.unity3d.com/ScriptReference/Application.OpenURL.html");
+    }
 
     public void SecondLvl()
     {
