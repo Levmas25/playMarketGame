@@ -17,6 +17,7 @@ public class Buttons : MonoBehaviour
     }
     public void Pause()
     {
+
         click.Play();
         Time.timeScale = 0f;
     }

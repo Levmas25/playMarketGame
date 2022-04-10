@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerJump : MonoBehaviour
 {
@@ -28,7 +30,7 @@ public class PlayerJump : MonoBehaviour
 
         foreach(var touch in Input.touches)
         {
-            if(touch.phase == TouchPhase.Began)
+            if(touch.phase == TouchPhase.Began && EventSystem.current.IsPointerOverGameObject(touch.fingerId) == false)
             {
                 player.AddForce(new Vector3(0, force, 0));
                 anim.Play();
