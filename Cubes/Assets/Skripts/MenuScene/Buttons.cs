@@ -33,11 +33,10 @@ public class Buttons : MonoBehaviour
     }
     public void OpenURL()
     {
-        Application.OpenURL("https://docs.unity3d.com/ScriptReference/Application.OpenURL.html");
+        Application.OpenURL("https://t.me/+03DnVXdzVLM0ZTBi");
     }
-
-    public void SecondLvl()
+    public void VK()
     {
-        SceneManager.LoadScene(2);
+        Application.OpenURL("https://vk.com/NameLessStudioGames228");
     }
 }

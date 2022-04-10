@@ -214,7 +214,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &291209388
 GameObject:
@@ -418,7 +418,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &346485772
 GameObject:
@@ -518,7 +518,7 @@ RectTransform:
   - {fileID: 291209389}
   - {fileID: 390833985}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1065,7 +1065,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 50.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &928316672
 GameObject:
@@ -1131,101 +1131,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1015330273
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -7154472949261737356, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_Size.y
-      value: 3.8743591
-      objectReference: {fileID: 0}
-    - target: {fileID: -7154472949261737356, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_Center.y
-      value: 1.9303131
-      objectReference: {fileID: 0}
-    - target: {fileID: -2166005830820451691, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_Mass
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: -2140146579028244772, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: tube
-      value: 
-      objectReference: {fileID: 6120295157924194133, guid: db13708f9e6beeb48b1f4b68ef2ea0f1, type: 3}
-    - target: {fileID: -2140146579028244772, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: force
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: -2140146579028244772, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: speed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -2140146579028244772, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: points
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 564.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 225.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 28.196898
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1588234831905002037, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2108066734709262479, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_Name
-      value: FlappyBitd
-      objectReference: {fileID: 0}
-    - target: {fileID: 2108066734709262479, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2108066734709262479, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: accf764fc8e0d5e48bd60b6be0085f2f, type: 3}
 --- !u!1 &1096991631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2451032083004696443, guid: 91d436c01d9bfd04995c1aaa41e4f6c4, type: 3}
@@ -1243,13 +1150,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5fbe2692f5b198142a236f351b4a7c58, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 100
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1339,13 +1246,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7b93f98df1d89b542a17c26cafa36eb9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 190
+  Priority: 210
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1441,7 +1348,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 25
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1756,7 +1663,7 @@ Transform:
   m_LocalScale: {x: 4, y: 1, z: 50.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1508528762
 GameObject:
