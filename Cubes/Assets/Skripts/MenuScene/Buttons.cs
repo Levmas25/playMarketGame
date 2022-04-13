@@ -7,7 +7,7 @@ public class Buttons : MonoBehaviour
     public void MenuStart()
     {
         click.Play();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("First");
     }
     public void MenuExit()
     {

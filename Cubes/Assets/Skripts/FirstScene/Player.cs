@@ -75,19 +75,16 @@ public class Player : MonoBehaviour
 
     public void OnRightButtonDown()
     {
-        touch.Play();
         speed = normal_speed;
     }
 
     public void OnLeftButtonDown()
     {
-        touch.Play();
         speed = -normal_speed;
     }
 
     public void ButtonUp()
     {
-        touch.Play();
         speed = 0f;
     }
 }
